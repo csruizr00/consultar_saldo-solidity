@@ -1,0 +1,18 @@
+//SPDX-License-Identifier: MIT
+
+pragma solidity 0.8.15;
+
+contract ExampleAddress {
+
+    address public someAddress;
+    uint public  balance ;
+
+    function setSomeAddress(address _someAddress) public {
+        someAddress = _someAddress;
+    }
+
+    function getAddressBalance() public view returns(address,uint) {
+                return(someAddress, someAddress.balance );
+    }
+
+}
